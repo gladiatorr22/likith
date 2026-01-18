@@ -229,7 +229,7 @@ export default function DragCanvas() {
                         onPointerDown={(e) => handlePointerDown(e, item.id)}
                     >
                         <div
-                            className={`transition-all duration-300 ${draggingId === item.id ? 'scale-105 cursor-grabbing shadow-2xl' : 'scale-100 cursor-grab hover:scale-[1.02]'}`}
+                            className={`transition-all duration-300 ${draggingId === item.id ? 'scale-105 cursor-grabbing shadow-2xl' : 'scale-100 cursor-grab hover:scale-[1.02]'} md:scale-100 scale-[0.6] origin-top-left`}
                         >
                             {item.component}
                         </div>
