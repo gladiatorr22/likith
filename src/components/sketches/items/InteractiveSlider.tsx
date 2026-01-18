@@ -25,7 +25,6 @@ export default function InteractiveSlider() {
                     value={brightness}
                     onChange={(e) => setBrightness(Number(e.target.value))}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
-                    orient="vertical"
                 />
             </div>
 
@@ -45,7 +44,6 @@ export default function InteractiveSlider() {
                     value={volume}
                     onChange={(e) => setVolume(Number(e.target.value))}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
-                    orient="vertical"
                 />
             </div>
         </div>
