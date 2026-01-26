@@ -69,7 +69,7 @@ const projects: Record<string, {
         title: 'Vera AI Macro Tracker',
         client: 'Vera',
         year: '2026',
-        websiteUrl: 'https://vera.health',
+        websiteUrl: '/work-in-progress',
         websiteLabel: 'vera.health',
         overview: [
             'Vera is an advanced "Meal Intelligence" system that goes beyond traditional calorie counting by focusing on the nuances of regional Indian cuisine. It is designed to understand the cultural context of food, distinguishing between various regional dishes like dal makhani and dal tadka.',
@@ -87,7 +87,7 @@ const projects: Record<string, {
         title: 'Onyx AI IDE',
         client: 'Personal',
         year: '2026',
-        websiteUrl: 'https://github.com/likith/onyx',
+        websiteUrl: '/work-in-progress',
         websiteLabel: 'View Link',
         overview: [
             'Onyx AI IDE is a high performance web based integrated development environment that brings a full coding experience directly to the browser. Built to leverage the latest in web technology, it combines the power of Next.js 15, WebContainers, and Monaco Editor to offer developers a seamless and efficient workflow without the need for local setup.',

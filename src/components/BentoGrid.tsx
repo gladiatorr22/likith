@@ -152,32 +152,43 @@ export default function BentoGrid() {
                                     boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
                                 }}
                             >
-                                {/* MOBILE LAYOUT: Spread to fill width with 4px gap from edges */}
-                                <div className="absolute inset-0 flex md:hidden items-center justify-center px-1 overflow-hidden">
-                                    <div className="relative w-full h-full flex items-center justify-center">
-                                        {techStackImages.map((img, i) => {
-                                            // 9 icons, spread evenly across container width minus 8px (4px each side)
-                                            const xOffset = (i - 4) * 28; // Spread to reach edges
-
-                                            return (
+                                {/* MOBILE LAYOUT: 2-row grid */}
+                                <div className="absolute inset-0 flex md:hidden items-center justify-center p-3 overflow-hidden">
+                                    <div className="flex flex-col gap-2 items-center">
+                                        {/* Row 1: First 5 icons */}
+                                        <div className="flex gap-2 justify-center">
+                                            {techStackImages.slice(0, 5).map((img, i) => (
                                                 <motion.div
                                                     key={i}
-                                                    className="absolute w-[30px] h-[30px] rounded-full shadow-lg overflow-hidden bg-white/80 backdrop-blur-sm border border-white/20 cursor-pointer"
-                                                    style={{
-                                                        x: xOffset,
-                                                        zIndex: i + 1,
-                                                    }}
-                                                    whileHover={{ scale: 1.2, zIndex: 100, y: -10 }}
-                                                    whileTap={{ scale: 1.3, zIndex: 100, y: -15 }}
+                                                    className="w-[36px] h-[36px] rounded-full shadow-lg overflow-hidden bg-white/80 backdrop-blur-sm border border-white/20 cursor-pointer"
+                                                    whileHover={{ scale: 1.2, zIndex: 100, y: -5 }}
+                                                    whileTap={{ scale: 1.3, zIndex: 100, y: -8 }}
                                                 >
                                                     <img
                                                         src={`/images/bento-grid-images/techstack/${img}`}
                                                         alt={img}
-                                                        className="w-full h-full object-contain p-0.5"
+                                                        className="w-full h-full object-contain p-1"
                                                     />
                                                 </motion.div>
-                                            );
-                                        })}
+                                            ))}
+                                        </div>
+                                        {/* Row 2: Last 4 icons */}
+                                        <div className="flex gap-2 justify-center">
+                                            {techStackImages.slice(5).map((img, i) => (
+                                                <motion.div
+                                                    key={i + 5}
+                                                    className="w-[36px] h-[36px] rounded-full shadow-lg overflow-hidden bg-white/80 backdrop-blur-sm border border-white/20 cursor-pointer"
+                                                    whileHover={{ scale: 1.2, zIndex: 100, y: -5 }}
+                                                    whileTap={{ scale: 1.3, zIndex: 100, y: -8 }}
+                                                >
+                                                    <img
+                                                        src={`/images/bento-grid-images/techstack/${img}`}
+                                                        alt={img}
+                                                        className="w-full h-full object-contain p-1"
+                                                    />
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
 
