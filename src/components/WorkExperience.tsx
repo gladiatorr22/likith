@@ -4,16 +4,19 @@ import Image from 'next/image';
 
 const experiences = [
     {
-        company: 'Freelance', // Title said "freelance software developer"
-        role: 'Freelance Software Developer', // The user prompt structure was a bit mixed, using title as role.
-        // "title freelance software developer" -> I'll assume this is the role text. 
-        // "do the same for webdesign agency logo" -> imply company is the agency.
-        // User request: "do the same for webdesign agency logo , add the logo image same style , title freelance software developer , remote aug 2025- present"
+        company: 'PayU',
+        role: 'Engineering Intern at',
+        location: 'Bengaluru, KA • Hybrid',
+        date: 'Feb 2026 - Present',
+        logo: '/payu-logo.png',
+    },
+    {
+        company: 'Freelance',
+        role: 'Freelance Software Developer',
         location: 'Remote',
         date: 'Aug 2025 - Present',
         logo: '/images/Webdesign agency logo.jpg',
     },
-
     {
         company: 'Pentagon Space',
         role: 'Python Full Stack Development Trainee at',
@@ -28,7 +31,6 @@ const experiences = [
         date: 'October 2024 - February 2025',
         logo: '/images/Biosoft-Logo.png',
     },
-
 ];
 
 export default function WorkExperience() {

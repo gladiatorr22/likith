@@ -14,7 +14,7 @@ export default function BentoGrid() {
     return (
         <section className="w-full">
             <div
-                className="grid grid-cols-2 md:grid-cols-3 auto-rows-auto md:auto-rows-[100px] gap-4 w-[75%] mx-auto md:mx-0 md:w-full md:max-w-[500px]"
+                className="grid grid-cols-2 md:grid-cols-3 auto-rows-auto md:auto-rows-[100px] lg:auto-rows-[120px] gap-4 w-[75%] mx-auto md:mx-0 md:w-full md:max-w-[500px] lg:max-w-[600px]"
             >
                 {items.map((item, index) => {
                     if (item.id === 1) {
@@ -196,12 +196,13 @@ export default function BentoGrid() {
                                 <div className="absolute inset-0 hidden md:flex items-center justify-center">
                                     {techStackImages.map((img, i) => {
                                         // Spread logic: Centered, spread out horizontally
-                                        const xOffset = (i - 4) * 26; // 26px spread
+                                        // Responsive spread: tighter on tablets, wider on desktop
+                                        const xOffset = (i - 4) * 26; // Base spread
 
                                         return (
                                             <motion.div
                                                 key={i}
-                                                className="absolute w-[48px] h-[48px] rounded-full shadow-lg overflow-hidden bg-white/90 backdrop-blur-md border border-white/30 cursor-pointer"
+                                                className="absolute w-[42px] h-[42px] lg:w-[48px] lg:h-[48px] rounded-full shadow-lg overflow-hidden bg-white/90 backdrop-blur-md border border-white/30 cursor-pointer"
                                                 style={{
                                                     x: xOffset,
                                                     zIndex: i + 1, // Base stacking order
